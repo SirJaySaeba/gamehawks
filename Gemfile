@@ -7,12 +7,14 @@ gem 'faker', '1.0.1'
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
+  gem 'heroku'
 end
 
 gem 'rake', '10.4.2'
 
 group :production do
   gem 'pg',             '0.17.1'
+  gem 'thin'
   gem 'rails_12factor', '0.0.2'
 end
 
