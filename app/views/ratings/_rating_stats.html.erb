@@ -1,0 +1,53 @@
+<div class="rating_stats">
+	<div class="rating_graph">
+
+		
+		<div class="rating_filled" data-avg="<%= @game.ratings.average(:value) %>">
+			<div class="rating_bar"></div>
+		</div>
+		
+		
+		<script>
+			var average = $(".rating_filled").attr("data-avg");
+			var avg_width = (average/10)*486;
+			$(".rating_filled").css("width", avg_width);
+		</script>
+		
+		
+	</div>
+	
+	<div class="rating_label">
+		<div>
+			Durchschnittswert:
+			<span class="rating_avg">
+				<% if !@game.average_rating.present? %>
+					unbewertet
+				<% else %>
+					<%= @game.ratings.average(:value).round(2) %>
+				<% end %>
+			</span>
+		</div>
+
+		<div>
+			Anzahl Wertungen: 
+			<span class="rating_amount"><%= @game.ratings.count %></span>
+		</div>
+
+		<div>
+			<% if user_signed_in? %>
+			Ihre Wertung :
+			<span class="current_user_rating">
+				
+				<%= current_user_rating %>
+	
+			</span>
+			<% end %>
+		</div>
+
+
+	
+		
+	</div>
+
+</div>
+

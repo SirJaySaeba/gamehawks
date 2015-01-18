@@ -1,0 +1,55 @@
+// Place all the styles related to the reviews controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* reviews */
+@import "bootstrap";
+@import "variables";
+
+
+.review_area{
+  margin-bottom: 20px;
+}
+.reviews {
+  list-style: none;
+  margin: 10px 0 0 0;
+
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+}
+.review_text{
+  display: block;
+  font-family: times;
+  font-size: 14px;
+  background: #f6f6f6;
+  padding: 5px;
+  min-height: 100px;
+}
+
+textarea{
+  width: 500px !important;
+}
+
+.timestamp {
+  color: #a0a0a0;
+}
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+}
+
+.review_delete{
+  font-size: 10px;
+}
+
+.user_review{
+  margin-top: 20px;
+}
